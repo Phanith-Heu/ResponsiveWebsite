@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  /* background-color: red; */
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.logo{
+  display: flex;
+  flex: 1;
+  color: rgb(7, 7, 211);
+}
+.navigation ul{
+  display: flex;
+  flex: 0.5;
+  justify-content: space-between;
+}
+
+.navigation ul li{
+  list-style-type: none;
+}
+.navigation ul li a{
+  text-decoration: none;
+  color: #2ecfc3;
+  font-weight: 900px;
+}
+.home-nav{
+  background-color: #2ecfc3;
+  text-align: center;
+  padding: 5%;
+  color: white;
+}
+.home-nav-img{
+  width: 10%;
+}
+.home-page{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* padding left and right here are the rest 4% */
+  padding-left: 2%;
+  padding-right: 2%;
+  /* background-color: red; */
+}
+
+
+.left-side-article, .main-side-article, .right-side-article{
+  flex: 32%; /* give with to it as flex 32%, Thus 32*3=96% and the rest 4%(padding) is for space left 2% and right 2% */
+  padding: 1%;
+}
+.right-side-article span{
+  font-weight: bold;
+}
+.home-page h1, p{
+  margin-bottom: 5%;
+}
+.main-side-article p{
+  margin-top: 5%;
+}
+footer{
+  background-color: lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+}
+footer p{
+  margin: 0;
+}
+
+
+/* For tablets: */
+@media only screen and (max-width:820px) {
+  .left-side-article {
+    flex: 32%;
+  }
+  .main-side-article {
+    flex: 64%;
+  }
+  .right-side-article{
+    flex: 100%;
+  }
+}
+
+/* For responsive resize screen */
+@media only screen and (max-width:716px) {
+  .navigation ul{
+    display: flex;
+    flex: 0.5;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width:536px) {
+  .navigation ul{
+    display: flex;
+    flex: 0.5;
+    font-size: 11px;
+  }
+}
+
+
+
+/* For mobile phones: */
+@media only screen and (max-width:500px) {
+  .left-side-article, .main-side-article, .left-side-article {
+    flex: 100%;
+  }
+  .logo{
+    font-size: 18px;
+  }
+  .navigation ul{
+    display: flex;
+    flex: 1;
+    font-size: 12px;
+  }
+}
